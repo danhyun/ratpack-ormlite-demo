@@ -20,7 +20,7 @@ import static ratpack.groovy.Groovy.ratpack
 import static ratpack.jackson.Jackson.json
 
 @DatabaseTable(tableName = "account")
-public class Account {
+class Account {
   @DatabaseField(id = true)
   String name
   @DatabaseField
