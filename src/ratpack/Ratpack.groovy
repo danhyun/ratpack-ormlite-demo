@@ -9,7 +9,6 @@ import com.j256.ormlite.table.DatabaseTable
 import com.j256.ormlite.table.TableUtils
 import ratpack.exec.Blocking
 import ratpack.exec.Promise
-import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.hikari.HikariModule
 import ratpack.server.Service
 import ratpack.server.StartEvent
@@ -65,7 +64,6 @@ class AccountService {
 
 ratpack {
   bindings {
-    module MarkupTemplateModule
     module HikariModule, {
       it.addDataSourceProperty("URL", "jdbc:h2:mem:account;INIT=CREATE SCHEMA IF NOT EXISTS DEV")
       it.dataSourceClassName = "org.h2.jdbcx.JdbcDataSource"
